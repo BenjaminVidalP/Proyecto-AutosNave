@@ -17,7 +17,7 @@ def registrarAutos(request):
     f=request.FILES['file']
     auto=Auto.objects.create(idAuto=idAuto, nombre=nombre, precio=precio,foto=f)
     messages.success(request, '¡Auto Registrado!')
-    return redirect('/')
+    return redirect('GestionAutos/')
 
 def editarAuto(request, idAuto):
     auto = Auto.objects.get(idAuto=idAuto)
@@ -38,7 +38,7 @@ def edicionAuto(request):
     auto.save()
 
     messages.success(request, '¡Auto Actualizado!')
-    return redirect('/')
+    return redirect('GestionAutos/')
 
 def eliminarAuto(request, idAuto):
     auto = Auto.objects.get(idAuto=idAuto)
