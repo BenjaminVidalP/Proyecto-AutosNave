@@ -92,7 +92,7 @@ def JEEP(request):
 
 #-----------------------PLANTILLAS------------------------
 
-def camaro(request):
+def Auto(request):
     contexto = {"nombreA":"Camaro", "img":"/static/core/img/ChevroletCamaro/Baner-camaro.jpg"
                 ,"img1":"/static/core/img/ChevroletCamaro/motor-camaro.png","texto1":"6.2"
                 ,"img2":"/static/core/img/ChevroletCamaro/caja-camaro.png","texto2":"CAJA AUTO"
@@ -108,7 +108,7 @@ def camaro(request):
                 ,"datosA":"Un facelift al performance." 
                 ,"datosB":"El nuevo Camaro fue rediseñado de principio a fin. Su línea ha evolucionado para verse aún mas estilizada, pero eso no es todo, incluye tecnología, performance y un manejo superior. Aceléralo hasta el fondo y descubre lo que significa la adrenalina."
                 ,"videoA":"https://www.youtube.com/embed/0ZzMcwdb2W0"}
-    return render(request,'core/ChevroletCamaro.html',contexto)
+    return render(request,'core/Auto.html',contexto)
 
 
 #-------------------------mapa-api------------------------
@@ -119,69 +119,10 @@ def mapa(request):
 
 
 #----------------------AUTOS Y CAMIONETAS ---------------
-
-#--Chevrolet--
-
-
-def onix(request):
-
-    return render(request, 'core/ChevroletOnixSedan.html')
-
-def sail(request):
-
-    return render(request, 'core/ChevroletSail.html')
-
-#--Ford--
-
-def territory(request):
-
-    return render(request, 'core/FordAllNewTerritory.html')
-
-def focus(request):
-
-    return render(request, 'core/FordFocus.html')
-
-def raptor(request):
-
-    return render(request, 'core/FordRaptor.html')
-
-#--Hyundai--
-
-def accent(request):
-
-    return render(request, 'core/HyundaiAccent.html')
-
-def tucson(request):
-
-    return render(request, 'core/HyundaiTucson.html')
-
-def veloster(request):
-
-    return render(request, 'core/HyundaiVeloster.html')
-
-#--Jeep--
-
-def cherokee(request):
-
-    return render(request, 'core/JeepCherokee.html')
-
-def gladiator(request):
-
-    return render(request, 'core/JeepGladiator.html')
-
-def wrangler(request):
-
-    return render(request, 'core/JeepWrangler.html')
-
 # Administrador
 
 def admin(request):
     return render(request, 'core/Administrador.html')
-
-# Agregar Autos
-
-def AgregarAutos(request):
-    return render(request, 'core/AgregarAutos.html')
 
 # Seccion Autos
 
