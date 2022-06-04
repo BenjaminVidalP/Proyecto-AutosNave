@@ -1,55 +1,48 @@
 from django.db import models
 
 # Create your models here.
-class Rol(models.Model):
-    nombreRol =models.CharField(max_length=40, verbose_name= 'Nombre rol')
-    tipoRol =models.CharField(max_length=20, verbose_name= 'Nombre de rol')
+
+# Modelo Tipo
+
+class Tipo(models.Model):
+    idTipo = models.IntegerField(primary_key=True, verbose_name='Id del tipo')
+    nombreTipo = models.CharField(max_length=20, verbose_name='Nombre del tipo', blank=False, null=False)
 
     def __str__(self):
-        return self.nombreRol
-
-
-#Modelo para usuario
-
-class Usuario(models.Model):
-    idUsuario =models.IntegerField(primary_key=True, verbose_name='Id de usuario')
-    nombreUsuario =models.CharField(max_length=30, verbose_name= 'Nombre usuario')
-    apellidoUsuario =models.CharField(max_length=40, verbose_name= 'Apellido usuario')
-    correo =models.CharField(max_length=30, verbose_name= 'Correo')
-    clave =models.CharField(max_length=30, verbose_name= 'Clave')
-    fotoPerfil =models.ImageField(upload_to='PerfilUsuario')
-    telefono =models.IntegerField()
-
-    def __str__(self):
-        return self.nombreUsuario
-
+        return self.nombreTipo
 
 # Modelo para auto
 
 class Auto(models.Model):
     idAuto =models.IntegerField(primary_key=True, verbose_name='Id auto')
     nombre =models.CharField(max_length=40, verbose_name=' Nombre auto')
+    img=models.ImageField(upload_to='Modelo', blank=True, null=True)
+    img1=models.ImageField(upload_to='imagen especificacion1', blank=True , null=True)
+    texto1=models.CharField(max_length=40, verbose_name='especificaciones1', null=True)
+    img2=models.ImageField(upload_to='imagen especificacion2', blank=True, null=True)
+    texto2=models.CharField(max_length=40, verbose_name='especificaciones2', null=True)
+    img3=models.ImageField(upload_to='imagen especificacion3', blank=True , null=True)
+    texto3=models.CharField(max_length=40, verbose_name='especificaciones3', null=True)
+    img4=models.ImageField(upload_to='imagen especificacion4', blank=True , null=True)
+    texto4=models.CharField(max_length=40, verbose_name='especificaciones4', null=True)
     precio =models.IntegerField(verbose_name='Precio auto')
     foto =models.ImageField(upload_to='Catalogo', null=True)
-    descripcion =models.TextField(verbose_name='Descripcion auto')
-    url =models.URLField(max_length=200, verbose_name='Url video')
+    galeria1=models.ImageField(upload_to='Galeria1', blank=True, null=True)
+    galeria2=models.ImageField(upload_to='Galeria2', blank=True, null=True)
+    galeria3=models.ImageField(upload_to='Galeria3', blank=True, null=True)
+    galeria4=models.ImageField(upload_to='Galeria4', blank=True, null=True)
+    galeria5=models.ImageField(upload_to='Galeria5', blank=True, null=True)
+    galeria6=models.ImageField(upload_to='Galeria6', blank=True, null=True)
+    datoA =models.TextField(verbose_name='Descripcion auto 1', null=True)
+    datoB =models.TextField(verbose_name='Descripcion auto 2', null=True)
+    videoUrl =models.URLField(max_length=280, verbose_name='Url video', null=True)
+    idtipo=models.ForeignKey(Tipo,on_delete=models.CASCADE , null=True)
 
     def __str__(self):
         return self.nombre
 
 
- # Modelo para comentario
-
-class Comentario(models.Model):
-    idComentario =models.TextField(verbose_name= 'Comentario')
-    fecha =models.DateField()
-    baneo =models.BooleanField(verbose_name='Baneo')
-    fechaBaneo =models.DateField()
-    razonBaneo =models.TextField(verbose_name='Razon baneo')
-    descripcion =models.TextField()
-
-    def __str__(self):
-        return self.fecha
+ 
 
 
 
