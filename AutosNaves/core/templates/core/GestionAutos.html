@@ -1,0 +1,81 @@
+{% extends "core/plantillaGestion.html" %}
+
+{% block body %}
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong class="text-dark">{{message}}</strong> 
+        </div>
+        {% endfor %}
+        {% endif %}
+        <h2>Gestion Vehiculos</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="{% url 'registrarAutos' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="number" id="idAuto" name="idAuto" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" class="form-control"
+                            placeholder="Nombre Vehiculo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="precio" name="precio" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" id="file" name="file" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+        <h1>Listado de Vehiculos</h1>
+        <div class="table-responsive py-2">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Foto</th>
+                        <th colspan="2">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in autos %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td>{{c.idAuto}}</td>
+                        <td>{{c.nombre}}</td>
+                        <td>{{c.precio}}</td>
+                        <td>
+                            {% if c.foto %}
+                            <img src="{{ c.foto.url }}" alt="nnnn" style="width: 150px;height: 150px;">
+                            {% else %}
+                            <p>No tiene foto</p>
+                            {% endif %}
+                        </td>
+                        <td><a href="editarAuto/{{c.idAuto}}" class="btn btn-info">Editar</a></td>
+                        <td><a href="eliminarAuto/{{c.idAuto}}" class="btn btn-danger btnEliminacion">Eliminar</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

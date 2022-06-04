@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <link href="{% static 'core/css/tarjetas.css' %}"  rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="{% static 'core/logo/Logocompañia.png' %}" type="image/x-icon">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/d1560c34b9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:8000"><img src="{% static 'core/img/LOGO/LogoChico.png' %}" alt="Avatar Logo" class="rounded-pill"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/Catalogo/">Catalogo</a>
+            </li>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/Marcas/">Marcas Disponibles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/AtencionCliente/">Atencion al Cliente</a>
+            </li>    
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tipos</a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/Autos/">Autos</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/Camionetas/">Camionetas </a></li>  
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cuenta</a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/RegistroSesion/">Registro</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/InicioSesion/">Inicio Sesión </a></li>  
+                </ul>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    
+        <div class="container-fluid">
+            <h2 class="texto"> Catalogo Disponible</h2>
+        </div>
+        
+        <div class="container">
+          <div class="row">
+            <div class="card">
+                    <img src="{% static 'core/img/HyundaiTucson/Tucson-marca.png' %}" alt="TUCSON">
+                    <h2>Hyundai Tucson</h2>
+                    <p>Precio:$20.290.000</p>
+                        <a href="http://127.0.0.1:8000/HyundaiTucson" class="btn btn-danger">Mas informacion</a>
+                </div>
+            <div class="card">
+                    <img src="{% static 'core/img/JeepGladiator/gladiator-nuevo.png' %}" alt="Gladiator">
+                    <h2>Jeep Gladiator</h2>
+                    <p>Precio:$46.990.000</p>
+                        <a href="http://127.0.0.1:8000/JeepGladiator" class="btn btn-danger">Mas informacion</a>
+                </div>
+            <div class="card">
+                    <img src="{% static 'core/img/JeepWrangler/wrangler-nuevo.png' %}" alt="Wrangler">
+                    <h2>Jeep Wrangler</h2>
+                    <p>Precio:$50.990.000</p>
+                        <a href="http://127.0.0.1:8000/JeepWrangler" class="btn btn-danger">Mas informacion</a>
+                </div>
+            <div class="card">
+                    <img src="{% static 'core/img/HyundaiAccent/accent-nuevo.png' %}" alt="Accent">
+                    <h2>Hyundai Accent</h2>
+                    <p>Precio:$12.090.000</p>
+                        <a href="http://127.0.0.1:8000/HyundaiTucson" class="btn btn-danger">Mas informacion</a>
+                </div>
+            <div class="card">
+                    <img src="{% static 'core/img/ChevroletSail/sail-nuevo.png' %}" alt="Sail">
+                    <h2>Chevrolet Sail</h2>
+                    <p>Precio:$7.690.000</p>
+                        <a href="http://127.0.0.1:8000/ChevroletSail" class="btn btn-danger">Mas informacion</a>
+                </div>
+          
+                      <div class="card">
+                        <img src="{% static 'core/img/JeepCherokee/cheroke-seminuevo.png' %}" alt="Cherokee">
+                        <h2>Jeep Cherokee</h2>
+                        <p>Precio:$46.990.000</p>
+                          <a href="http://127.0.0.1:8000/JeepCherokee" class="btn btn-danger">Mas informacion</a>
+                      </div>
+                      <div class="card">
+                        <img src="{% static 'core/img/HyundaiVeloster/veloster-marca.png' %}" alt="Veloster">
+                        <h2>Hyundai Veloster</h2>
+                        <p>Precio:$27.490.000</p>
+                          <a href="http://127.0.0.1:8000/HyundaiVeloster" class="btn btn-danger">Mas informacion</a>
+                      </div>
+                      <div class="card">
+                        <img src="{% static 'core/img/FordFocus/focus-marca.png' %}" alt="Focus">
+                        <h2>Ford Focus</h2>
+                        <p>Precio:$12.990.000.</p>
+                          <a href="http://127.0.0.1:8000/FordFocus" class="btn btn-danger">Mas informacion</a>
+                      </div>
+                    <div class="card">
+                        <img src="{% static 'core/img/FordRaptor/raptor-seminuevo.png' %}" alt="Raptor">
+                        <h2>Ford Raptor</h2>
+                        <p>Precio:$55.900.000</p>
+                          <a href="http://127.0.0.1:8000/FordRaptor" class="btn btn-danger">Mas informacion</a>
+                      </div>
+                  
+                      <div class="card">
+                        <img src="{% static 'core/img/FordTerritory/Territory-seminuevo.png' %}" alt="Territory">
+                        <h2>Ford Territory</h2>
+                        <p>Precio:$22.090.000</p>
+                          <a href="http://127.0.0.1:8000/FordAllNewTerritory" class="btn btn-danger">Mas informacion</a>
+                      </div>
+                      <div class="card">
+                        <img src="{% static 'core/img/ChevroletCamaro/camaro-seminuevo.png' %}" alt="Camaro">
+                        <h2>Camaro</h2>
+                        <p>Precio:$45.000.000</p>
+                          <a href="http://127.0.0.1:8000/ChevroletCamaro" class="btn btn-danger">Mas informacion</a>
+                      </div>
+                      <div class="card">
+                        <img src="{% static 'core/img/ChevroletSedan/onix-seminuevo.png' %}" alt="onix">
+                        <h2>Chevrolet Sedan</h2>
+                        <p>Precio:$10.590.000</p>
+                          <a href="http://127.0.0.1:8000/ChevroletOnixSedan" class="btn btn-danger">Mas informacion</a>
+                      </div>
+          </div>
+        </div>
+
+
+
+        
+    <!-- footer -->
+    <footer class="pie-pagina">
+      <div class="grupo-1">
+        <div class="box">
+          <figure>
+            <a href="http://127.0.0.1:8000">
+              <img src="{% static 'core/img/LOGO/Logocompania.png' %}" alt="LOGO" class="img-fluid">
+            </a>
+          </figure>
+        </div>
+        <div class="box">
+          <h2>SOBRE NOSOTROS</h2>
+          <p> -Autos Nuevos y Usados</p>
+          <p> -Atencion Al Cliente</p>
+          <p> -Contactanos: <br> +56966263113</p>
+        </div>
+          
+        <div class="box">
+          <h2>Nuestras redes sociales:</h2>
+          <div class="red-social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="https://www.instagram.com/bnja.cth/" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+          </div>
+    
+          <div class="box">
+            <h2>Donde encontrarnos:</h2>
+            <div class="ubicacion-local">
+              <a href="http://127.0.0.1:8000/mapa/" class="fa-solid fa-location-dot"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grupo-2">
+        <small>&copy; 2022 <b>Autos Naves</b> - Todos los derechos reservados</small>
+    
+      </div>
+    </footer>
+
+    
+</body>
+</html>

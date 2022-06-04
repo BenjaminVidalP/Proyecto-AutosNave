@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <title>Panel Admin</title>
+	    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+	    <!----css3---->
+        <link rel="stylesheet" href="{% static 'core/css/custom.css' %}">
+		<!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+	
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+	<!--google material icon-->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  
+
+
+
+<div class="wrapper">
+
+
+<div class="body-overlay"></div>
+
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="material-icons">admin_panel_settings</i><span> Autos Naves</span></h3>
+            </div>
+            <ul class="list-unstyled components">
+			<li  class="active">
+                    <a href="#" class="dashboard"><i class="material-icons">dashboard</i><span>Panel</span></a>
+                </li>
+		
+		    <div class="small-screen navbar-display">
+                <li class="dropdown d-lg-none d-md-block d-xl-none d-sm-block">
+                    <a href="#homeSubmenu0" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+					<i class="material-icons">notifications</i><span> 4 notification</span></a>
+                    <ul class="collapse list-unstyled menu" id="homeSubmenu0">
+                                    <li>
+                                    <a href="#">You have 5 new messages</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">You're now friend with Mike</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wish Mary on her birthday!</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">5 warnings in Server Console</a>
+                                    </li>
+                    </ul>
+                </li>
+				
+				<li  class="d-lg-none d-md-block d-xl-none d-sm-block">
+                    <a href="#"><i class="material-icons">apps</i><span>apps</span></a>
+                </li>
+				
+				<li  class="d-lg-none d-md-block d-xl-none d-sm-block">
+                    <a href="#"><i class="material-icons">person</i><span>user</span></a>
+                </li>
+				
+				<li  class="d-lg-none d-md-block d-xl-none d-sm-block">
+                    <a href="#"><i class="material-icons">settings</i><span>setting</span></a>
+                </li>
+				</div>
+			
+			
+                <li class="">
+                    <a href="#"><i class="material-icons">receipt</i><span>Reportes</span></a>
+                </li>
+                
+                <li class="">
+                    <a href="#"><i class="material-icons">attach_money</i><span>Ventas</span></a>
+                </li>
+				
+				<li class="">
+                    <a href="#"><i class="material-icons">directions_car</i><span>Vehiculos</span></a>
+                </li>
+
+                <li class="">
+                    <a href="#"><i class="material-icons">chat</i><span>Mensajes</span></a>
+                </li>
+			
+               
+               <li class="">
+                    <a href="#"><i class="material-icons">pin_drop</i><span>Ubicación</span></a>
+                </li>
+				
+				 <li  class="">
+                    <a href="#"><i class="material-icons">logout</i><span>Cerrar Sesión</span></a>
+                </li>
+               
+               
+            </ul>
+
+           
+        </nav>
+		
+		
+
+        <!-- Page Content  -->
+        <div id="content">
+		
+		<div class="top-navbar">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="d-xl-block d-lg-block d-md-mone d-none">
+                        <span class="material-icons">arrow_back_ios</span>
+                    </button>
+					
+					<a class="navbar-brand" href="#"> Panel </a>
+					
+                    <button class="d-inline-block d-lg-none ml-auto more-button" type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+
+                    <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">   
+                            <li class="dropdown nav-item active">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                   <span class="material-icons">notifications</span>
+								   <span class="notification">4</span>
+                               </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">You have 5 new messages</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">You're now friend with Mike</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Wish Mary on her birthday!</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">5 warnings in Server Console</a>
+                                    </li>
+                                  
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+								<span class="material-icons">person</span>
+								</a>
+                            </li>
+							<li class="nav-item">
+                                <a class="nav-link" href="#">
+								<span class="material-icons">settings</span>
+								</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+	    </div>
+			
+			
+			<div class="main-content">
+			
+			<div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header">
+                                    <div class="icon icon-warning">
+                                       <span class="material-icons">equalizer</span>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category"><strong>Visitas</strong></p>
+                                    <h3 class="card-title">90</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons text-info">info</i>
+                                        <a href="#pablo">Ver informe detallado</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header">
+                                    <div class="icon icon-rose">
+                                       <span class="material-icons">shopping_cart</span>
+
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category"><strong>Ventas</strong></p>
+                                    <h3 class="card-title">15</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">local_offer</i> Ventas de autos
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header">
+                                    <div class="icon icon-success">
+                                        <span class="material-icons">
+                                    directions_car
+                                    </span>
+
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category"><strong>Autos</strong></p>
+                                    <h3 class="card-title">12</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">date_range</i> Modelos Totales
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="card card-stats">
+                                <div class="card-header">
+                                    <div class="icon icon-info">
+                                        <span class="material-icons">
+                                            pin_drop
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card-content">
+                                    <p class="category"><strong>Local</strong></p>
+                                    <h3 class="card-title">Aqui</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="stats">
+                                        <i class="material-icons">update</i> Ver ahora
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					
+					
+					<div class="row ">
+                        <div class="col-lg-7 col-md-12">
+                            <div class="card" style="min-height: 485px">
+                                <div class="card-header card-header-text">
+                                    <h4 class="card-title">Usuarios</h4>
+                                    <p class="category">Nuevos Usuarios</p>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="text-primary">
+                                            <tr><th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Correo</th>
+                                            <th>Telefono</th>
+                                        </tr></thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Bob Williams</td>
+                                                <td>correo@gmail.com</td>
+                                                <td>123456789</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Mike Tyson</td>
+                                                <td>correo@gmail.com</td>
+                                                <td>123456789</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Tim Sebastian</td>
+                                                <td>correo@gmail.com</td>
+                                                <td>123456789</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Philip Morris</td>
+                                                <td>correo@gmail.com</td>
+                                                <td>123456789</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Minerva Hooper</td>
+                                                <td>correo@gmail.com</td>
+                                                <td>123456789</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Hulk Hogan</td>
+                                                <td>correo@gmail.com</td>
+                                                <td>123456789</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Angelina Jolie </td>
+                                                <td>correo@gmail.com</td>
+                                                <td>123456789</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <div class="col-lg-5 col-md-12">
+                            <div class="card" style="min-height: 485px">
+                                <div class="card-header card-header-text">
+                                    <h4 class="card-title">Actividades</h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="streamline">
+                                        <div class="sl-item sl-primary">
+                                            <div class="sl-content">
+                                                <small class="text-muted">Hace 5 minutos</small>
+                                                <p>Williams ha consultado por Chevrolet Camaro</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item sl-danger">
+                                            <div class="sl-content">
+                                                <small class="text-muted">Hace 25 minutos</small>
+                                                <p>Jane se ha registrado !Bienvenido!</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item sl-success">
+                                            <div class="sl-content">
+                                                <small class="text-muted">Hace 40 minutos</small>
+                                                <p>Kate added you to her team</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item">
+                                            <div class="sl-content">
+                                                <small class="text-muted">Hace 45 minutos</small>
+                                                <p>John has finished his task</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item sl-warning">
+                                            <div class="sl-content">
+                                                <small class="text-muted">Hace 55 minutos</small>
+                                                <p>Jim shared a folder with you</p>
+                                            </div>
+                                        </div>
+                                        <div class="sl-item">
+                                            <div class="sl-content">
+                                                <small class="text-muted">Hace 60 minutos</small>
+                                                <p>John has finished his task</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+					
+					
+						
+			<footer class="footer">
+                <div class="container-fluid">
+				    <div class="row">
+				        <div class="col-md-12">
+				            <p class="copyright d-flex justify-content-end"> &copy 2022 - <b>Autos Naves</b> - Todos los derechos reservados</p>
+				        </div>
+				    </div>
+				</div>
+            </footer>
+		</div>
+					
+				
+
+        </div>
+    </div>
+
+
+
+
+
+
+	
+  
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+   <script src="{% static 'core/js/jquery-3.3.1.slim.min.js' %}"></script>
+   <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+   <script src="{% static 'core/js/java.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atencion al Cliente</title>
+    <link href="{% static 'core/css/formulario.css' %}"  rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="{% static 'core/logo/Logocompañia.png' %}" type="image/x-icon">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/d1560c34b9.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="http://127.0.0.1:8000"><img src="{% static 'core/img/LOGO/LogoChico.png' %}" alt="Avatar Logo" class="rounded-pill"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/Catalogo/">Catalogo</a>
+        </li>
+
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/Marcas/">Marcas Disponibles</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/AtencionCliente/">Atencion al Cliente</a>
+        </li>    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tipos</a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/Autos/">Autos</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/Camionetas/">Camionetas </a></li>  
+            </ul>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cuenta</a>
+            <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/RegistroSesion/">Registro</a></li>
+            <li><a class="dropdown-item" href="http://127.0.0.1:8000/InicioSesion/">Inicio Sesión </a></li>  
+            </ul>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+  
+    <!-- agregar un margin a la img de atencion al cliente  para que no se pege a la navbar-->
+  
+          <div class="container">
+              <div class="row">
+                  <div class="col">
+                      <img class="img-fluid" src="{% static 'core/img/Logo/atencion_al_cliente.png' %}" >
+                  </div>
+              </div>
+          </div>
+  
+            
+          <div class="container">
+              <p class="text-center">En <strong>Motores Naves</strong> estamos interesados en saber sobre las cosas que te importan, que te mueven y motivan.¡Escribenos! y uno de nuestros ejecutivos se contactará contigo dentro de poco.</p> 
+          </div>
+  
+  
+              <main>
+              <h1 class="h1"> Solicitud </h1>
+              <form name="solicitud" class="solicitud" id="solicitud" method="post" >
+                <div class="solicitud__grupo" id="grupo__nombre">
+                    <label for="nombre" class="solicitud__label">Nombre:</label>
+                    <div class="solicitud__grupo-input">
+                      <input name="nombre" type="text" class="solicitud__input" id="nombre" placeholder="Juanito Perez*">
+                    </div>
+                    <p class="solicitud__input-error">El nombre tiene que ser de 4 a 40 digitos y solo puede contener letras. </p>
+                </div>
+  
+                <div class="solicitud__grupo" id="grupo__correo">
+                    <label for="correo" class="solicitud__label">Correo electronico:</label>
+                    <div class="solicitud__grupo-input">
+                      <input name="correo"type="email" class="solicitud__input" id="correo" placeholder="correo@gmail.com">
+                    </div>
+                    <p class="solicitud__input-error">El correo solo puede contener letras,números,puntos,guiones y guion bajo.</p>
+                </div>
+  
+                <div class="solicitud_grupo" id="grupo__telefono">
+                    <label for="telefono" class="solicitud__label">Telefono:</label>
+                    <div class="solicitud__grupo-input">
+                      <input name="telefono" type="text" class="solicitud__input" id="telefono" placeholder="1234567889*">                          
+                    </div>
+                    <p class="solicitud__input-error">El telefono solo puede contener numeros y el maximo de 14 digitos.</p>
+                </div>
+  
+                <div class="solicitud__grupo" id="grupo__asunto">
+                  <label for="asunto" class="solicitud__label">Asunto</label>
+                  <select class="form-select" aria-label="">
+                    <option selected disabled value="">Seleccione Asunto..*</option>
+                    <option value="Consultar disponibilidad">Disponibilidad</option>
+                    <option value="Falla mecánica">Falla mecánica</option>
+                    <option value="Demora entrega vehículo">Demora entrega vehículo</option>
+                    <option value="Documentación pendiente">Documentación pendiente</option>
+                    <option value="Transferencia vehículo">Transferencia vehículo</option>
+                  </select>
+                </div>
+  
+                <div class="solicitud__grupo" id="grupo__comentario">
+                  <label for="comentario" class="solicitud__label">Comentario:</label>
+                  <div class="solicitud__grupo-input">
+                    <input name="comentario"type="text" class="solicitud__input" id="comentario" placeholder="Comentario">
+                  </div>
+                </div>
+  
+                
+  
+                <div class="solicitud__mensaje" id="solicitud__mensaje">
+                  <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor rellena la solicitud correctamente.</p>
+                </div>
+  
+                <button type="submit" class="btn btn-danger">Enviar</button>
+                <p class="solicitud__mensaje-exito" id="solicitud__mensaje-exito">Su solicitud ha sido realizada con exito!</p>
+  
+            </form>
+          </main>
+                
+<!-- footer -->
+<footer class="pie-pagina">
+  <div class="grupo-1">
+    <div class="box">
+      <figure>
+        <a href="http://127.0.0.1:8000">
+          <img src="{% static 'core/img/LOGO/Logocompania.png' %}" alt="LOGO" class="img-fluid">
+        </a>
+      </figure>
+    </div>
+    <div class="box">
+      <h2>SOBRE NOSOTROS</h2>
+      <p> -Autos Nuevos y Usados</p>
+      <p> -Atencion Al Cliente</p>
+      <p> -Contactanos: <br> +56966263113</p>
+    </div>
+      
+    <div class="box">
+      <h2>Nuestras redes sociales:</h2>
+      <div class="red-social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/bnja.cth/" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-twitter"></a>
+      </div>
+
+      <div class="box">
+        <h2>Donde encontrarnos:</h2>
+        <div class="ubicacion-local">
+          <a href="http://127.0.0.1:8000/mapa/" class="fa-solid fa-location-dot"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grupo-2">
+    <small>&copy; 2022 <b>Autos Naves</b> - Todos los derechos reservados</small>
+
+  </div>
+</footer>
+  
+        <script src="{% static 'core/js/solicitud.js' %}"></script>
+        <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

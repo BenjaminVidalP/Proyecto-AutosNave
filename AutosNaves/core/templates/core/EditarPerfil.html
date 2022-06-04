@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <link href="{% static 'core/css/editperfil.css' %}" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="{% static 'core/img/logo/Logocompañia.png' %}" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/d1560c34b9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://127.0.0.1:8000"><img src="{% static 'core/img/LOGO/LogoChico.png' %}" alt="Avatar Logo" class="rounded-pill"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/Catalogo/">Catalogo</a>
+            </li>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/Marcas/">Marcas Disponibles</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/AtencionCliente/">Atencion al Cliente</a>
+            </li>    
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tipos</a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/Autos/">Autos</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/Camionetas/">Camionetas </a></li>  
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cuenta</a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/RegistroSesion/">Registro</a></li>
+                <li><a class="dropdown-item" href="http://127.0.0.1:8000/InicioSesion/">Inicio Sesión </a></li>  
+                </ul>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+
+    <main>
+
+        <h1>Editar perfil</h1>
+        
+        <form action=""    class="editarperfil" id="editarperfil" name="editarperfil">
+
+         <!--Grupo Nombre-->
+
+            <div class="editperfil__grupo" id="grupo__nombre">
+                <label for="nombre" class="editarperfil__label">Nombre:</label>
+                <div class="editperfil__grupo-input">
+                    <input type="text" class="editarperfil__input" name="nombre" id="nombre" placeholder="Nuevo nombre">
+                </div>
+                <p class="editperfil__input-error">El nombre tiene que ser de 4 a 40 digitos y solo puede contener letras.</p>
+            </div>
+              <!--Grupo Usuario-->
+            <div class="editperfil__grupo" id="grupo__usuario">
+                <label for="usuario" class="editarperfil__label">Usuario:</label>
+                <div class="editperfil__grupo-input">
+                    <input type="text" class="editarperfil__input" name="usuario" id="usuario" placeholder="Nuevo nombre usuario">
+                </div>
+                <p class="editperfil__input-error">El usuario solo puede contener numeros, letras y guion bajo.</p>
+            </div> 
+             <!--Grupo Contraseña-->
+            <div class="editperfil__grupo" id="grupo__password">
+                <label for="password2" class="editarperfil__label"> Nueva Contraseña</label>
+                <div class="editperfil__grupo-input">
+                    <input type="password" class="editarperfil__input" name="password" id="password">
+                </div>
+                <p class="editperfil__input-error">La contraseña tiene que ser de 4 a 12 digitos.</p>
+            </div> 
+
+              <!--Grupo Contraseña 2-->
+
+            <div class="editperfil__grupo" id="grupo__password2">
+                <label for="pasgrupo_password2" class="editarperfil__label">Confirmar Contraseña:</label>
+                <div class="editperfil__grupo-input">
+                    <input type="password" class="editarperfil__input" name="password2" id="password2">
+                </div>
+                <p class="editperfil__input-error">Ambas contraseñas deben coincidir.</p>
+            </div>
+
+         <!-- Grupo Correo -->
+
+            <div class="editperfil__grupo" id="grupo__correo">
+                <label for="correo" class="editarperfil__label">Correo:</label>
+                <div class="editperfil__grupo-input">
+                    <input type="email" class="editarperfil__input" name="correo" id="correo" placeholder="Correo">
+                </div>
+                <p class="editperfil__input-error">El correo solo puede contener letras,números,puntos,guiones y guion bajo.</p>
+            </div>
+
+         <!--Grupo Telefono-->
+
+            <div class="editperfil__grupo" id="grupo__telefono">
+                <label for="telefono" class="editarperfil__label">Telefono:</label>
+                <div class="editperfil__grupo-input">
+                    <input type="text" class="editarperfil__input" name="telefono" id="correo" placeholder="123456789">
+                </div>
+                <p class="editperfil__input-error">El telefono solo puede contener numeros y solo 9 digitos.</p>
+            </div>
+
+
+            <div class="editperfil__mensaje" id="editperfil__mensaje">
+                <p><b>Error:</b>Por favor rellena los campos correctamente.</p>
+            </div>
+
+            <div class="editperfil__grupo editperfil__grupo-btn-enviar">
+                <button type="submit" class="editperfil__btn">Aceptar</button>
+                <p class="editperfil__mensaje-exito" id="editperfil__mensaje-exito">Cambios aplicados correctamente.</p>
+            </div>
+
+        </form>
+    </main>
+
+
+    <!-- footer -->
+<footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+          <a href="http://127.0.0.1:8000">
+            <img src="{% static 'core/img/LOGO/Logocompania.png' %}" alt="LOGO" class="img-fluid">
+          </a>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <p> -Autos Nuevos y Usados</p>
+        <p> -Atencion Al Cliente</p>
+        <p> -Contactanos: <br> +56966263113</p>
+      </div>
+        
+      <div class="box">
+        <h2>Nuestras redes sociales:</h2>
+        <div class="red-social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="https://www.instagram.com/bnja.cth/" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-twitter"></a>
+        </div>
+  
+        <div class="box">
+          <h2>Donde encontrarnos:</h2>
+          <div class="ubicacion-local">
+            <a href="http://127.0.0.1:8000/mapa/" class="fa-solid fa-location-dot"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small>&copy; 2022 <b>Autos Naves</b> - Todos los derechos reservados</small>
+  
+    </div>
+  </footer>
+
+ <script src="{% static 'core/js/valiperfil.js' %}"></script>
+
+    
+</body>
+</html>

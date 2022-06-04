@@ -1,0 +1,33 @@
+{% extends "core/plantillaGestion.html" %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>Editar Vehiculo</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="{% url 'edicionAuto' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="number" id="idAuto" name="idAuto" value="{{auto.idAuto}}" class="form-control" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" value="{{auto.nombre}}" class="form-control"
+                            placeholder="Nombre Vehiculo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="precio" name="precio" value="{{auto.precio}}"  class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" id="file" name="file" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
