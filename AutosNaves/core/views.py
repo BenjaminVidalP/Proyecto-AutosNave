@@ -17,7 +17,7 @@ def registrarAutos(request):
     f=request.FILES['file']
     auto=Auto.objects.create(idAuto=idAuto, nombre=nombre, precio=precio,foto=f)
     messages.success(request, '¡Auto Registrado!')
-    return redirect('GestionAutos/')
+    return redirect('GestionAutos')
 
 def editarAuto(request, idAuto):
     auto = Auto.objects.get(idAuto=idAuto)
@@ -38,13 +38,13 @@ def edicionAuto(request):
     auto.save()
 
     messages.success(request, '¡Auto Actualizado!')
-    return redirect('GestionAutos/')
+    return redirect('GestionAutos')
 
 def eliminarAuto(request, idAuto):
     auto = Auto.objects.get(idAuto=idAuto)
     auto.delete()
     messages.success(request, '¡Auto Eliminado!')
-    return redirect('/')
+    return redirect('GestionAutos')
 
 
 def home(request):
@@ -92,23 +92,23 @@ def JEEP(request):
 
 #-----------------------PLANTILLAS------------------------
 
-def camaro(request):
-    contexto = {"nombreA":"Camaro", "img":"/static/core/img/ChevroletCamaro/Baner-camaro.jpg"
-                ,"img1":"/static/core/img/ChevroletCamaro/motor-camaro.png","texto1":"6.2"
-                ,"img2":"/static/core/img/ChevroletCamaro/caja-camaro.png","texto2":"CAJA AUTO"
-                ,"img3":"/static/core/img/ChevroletCamaro/velocimetro-camaro.png","texto3":"0 A 100 KM/H"
-                ,"img4":"/static/core/img/ChevroletCamaro/certificacion-camaro.png","texto4":"Servicio"
-                ,"galeriaimg1":"/static/core/img/ChevroletCamaro/galeria1.jpg"
-                ,"galeriaimg2":"/static/core/img/ChevroletCamaro/galeria2.jpg"
-                ,"galeriaimg3":"/static/core/img/ChevroletCamaro/galeria3.jpg"
-                ,"galeriaimg4":"/static/core/img/ChevroletCamaro/galeria4.jpg"
-                ,"galeriaimg5":"/static/core/img/ChevroletCamaro/galeria5.jpg"
-                ,"galeriaimg6":"/static/core/img/ChevroletCamaro/galeria6.jpg"
+def Vehiculo(request):
+    contexto = {"nombreA":"Camaro", "img":"/static/core/img/Vehiculo/Baner-camaro.jpg"
+                ,"img1":"/static/core/img/Vehiculo/motor-camaro.png","texto1":"6.2"
+                ,"img2":"/static/core/img/Vehiculo/caja-camaro.png","texto2":"CAJA AUTO"
+                ,"img3":"/static/core/img/Vehiculo/velocimetro-camaro.png","texto3":"0 A 100 KM/H"
+                ,"img4":"/static/core/img/Vehiculo/certificacion-camaro.png","texto4":"Servicio"
+                ,"galeriaimg1":"/static/core/img/Vehiculo/galeria1.jpg"
+                ,"galeriaimg2":"/static/core/img/Vehiculo/galeria2.jpg"
+                ,"galeriaimg3":"/static/core/img/Vehiculo/galeria3.jpg"
+                ,"galeriaimg4":"/static/core/img/Vehiculo/galeria4.jpg"
+                ,"galeriaimg5":"/static/core/img/Vehiculo/galeria5.jpg"
+                ,"galeriaimg6":"/static/core/img/Vehiculo/galeria6.jpg"
                 ,"nombreG":"Galeria de Imagenes"
                 ,"datosA":"Un facelift al performance." 
                 ,"datosB":"El nuevo Camaro fue rediseñado de principio a fin. Su línea ha evolucionado para verse aún mas estilizada, pero eso no es todo, incluye tecnología, performance y un manejo superior. Aceléralo hasta el fondo y descubre lo que significa la adrenalina."
                 ,"videoA":"https://www.youtube.com/embed/0ZzMcwdb2W0"}
-    return render(request,'core/ChevroletCamaro.html',contexto)
+    return render(request,'core/Vehiculo.html',contexto)
 
 
 #-------------------------mapa-api------------------------
@@ -120,68 +120,10 @@ def mapa(request):
 
 #----------------------AUTOS Y CAMIONETAS ---------------
 
-#--Chevrolet--
-
-
-def onix(request):
-
-    return render(request, 'core/ChevroletOnixSedan.html')
-
-def sail(request):
-
-    return render(request, 'core/ChevroletSail.html')
-
-#--Ford--
-
-def territory(request):
-
-    return render(request, 'core/FordAllNewTerritory.html')
-
-def focus(request):
-
-    return render(request, 'core/FordFocus.html')
-
-def raptor(request):
-
-    return render(request, 'core/FordRaptor.html')
-
-#--Hyundai--
-
-def accent(request):
-
-    return render(request, 'core/HyundaiAccent.html')
-
-def tucson(request):
-
-    return render(request, 'core/HyundaiTucson.html')
-
-def veloster(request):
-
-    return render(request, 'core/HyundaiVeloster.html')
-
-#--Jeep--
-
-def cherokee(request):
-
-    return render(request, 'core/JeepCherokee.html')
-
-def gladiator(request):
-
-    return render(request, 'core/JeepGladiator.html')
-
-def wrangler(request):
-
-    return render(request, 'core/JeepWrangler.html')
-
 # Administrador
 
 def admin(request):
     return render(request, 'core/Administrador.html')
-
-# Agregar Autos
-
-def AgregarAutos(request):
-    return render(request, 'core/AgregarAutos.html')
 
 # Seccion Autos
 

@@ -1,6 +1,6 @@
-{% extends 'core/plantillaAdmin.html' %}
+{% extends 'core/PlantillaAdmin.html' %}
 {% block lugar %}
-<a class="navbar-brand" href="#"> Vehiculo</a>
+<a class="navbar-brand" href="#"> Vehiculos </a>
 {% endblock lugar %}
 {% block relleno %}
 <div class="row">
@@ -9,7 +9,7 @@
         {% for message in messages %}
         <div class="alert alert-dismissible alert-success">
             <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong class="text-dark">{{message}}</strong> 
+            <strong class="text-dark">{{message}}</strong>
         </div>
         {% endfor %}
         {% endif %}
@@ -22,14 +22,14 @@
                         <input type="number" id="idAuto" name="idAuto" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="nombre" name="nombre" class="form-control"
-                            placeholder="Nombre Vehiculo" required>
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre Vehiculo"
+                            required>
                     </div>
                     <div class="form-group">
                         <input type="number" id="precio" name="precio" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <input type="file" id="file" name="file" class="form-control" >
+                        <input type="file" id="file" name="file" class="form-control">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-success btn-block text-white">Guardar</button>
@@ -75,7 +75,6 @@
                 </tbody>
             </table>
         </div>
-
     </div>
 
 </div>
