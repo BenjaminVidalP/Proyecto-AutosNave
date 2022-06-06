@@ -1,10 +1,31 @@
 from django.shortcuts import render, redirect
 from .models import Auto
 from django.contrib import messages
+from .forms import UserRegisterForm
 from . import views
 
 # Create your views here.
+def login(request):
 
+    return render(request, 'core/login.html')
+
+def registro(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username= form.cleaned_data['username']
+            messages.success(request, f'Usuario {username} creado')
+            return redirect('PerfilUsuario')
+    else:
+        form = UserRegisterForm()
+    
+    contexto = { 'form' : form }
+    return render(request, 'core/registro.html', contexto)
+
+def logout(request):
+
+    return render(request, 'core/logout.html')
 
 
 def GestionAutos(request):
@@ -59,13 +80,6 @@ def home(request):
 
 #---------------------INICIO/REGISTRO/PerfilUsuario-----------------
 
-def InicioSesion(request):
-
-    return render(request, 'core/InicioSesion.html')
-
-def RegistroSesion(request):
-
-    return render(request, 'core/RegistroSesion.html')
 
 def PerfilUsuario(request):
 

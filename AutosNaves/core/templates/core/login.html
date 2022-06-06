@@ -1,0 +1,19 @@
+{% extends 'core/PlantillaLogin.html' %}
+{% load static %}
+
+{% block a %}
+<link rel="stylesheet" type="text/css" href="{% static 'core/css/plantillaA.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'core/css/plantillaA1.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'core/css/plantillaF.css' %}">
+{% endblock %}
+{% block content %}
+        <main>
+            <h2>Ingreso</h2>
+            <hr>
+            <form class="form" action="" method="POST">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit" id="submit">Entrar</button>
+            </form>
+        </main>
+{% endblock %}
