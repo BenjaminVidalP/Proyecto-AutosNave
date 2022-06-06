@@ -2,14 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-# Modelo Tipo
-
-class Tipo(models.Model):
-    idTipo = models.IntegerField(primary_key=True, verbose_name='Id del tipo')
-    nombreTipo = models.CharField(max_length=20, verbose_name='Nombre del tipo', blank=False, null=False)
-
-    def __str__(self):
-        return self.nombreTipo
 
 # Modelo para auto
 
@@ -36,7 +28,6 @@ class Auto(models.Model):
     datoA =models.TextField(verbose_name='Descripcion auto 1', null=True)
     datoB =models.TextField(verbose_name='Descripcion auto 2', null=True)
     videoUrl =models.URLField(max_length=280, verbose_name='Url video', null=True)
-    idtipo=models.ForeignKey(Tipo,on_delete=models.CASCADE , null=True)
 
     def __str__(self):
         return self.nombre
