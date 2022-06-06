@@ -35,7 +35,6 @@ body{
     z-index: 1000;
 }
 .container .card{
-    width: 270px;
     height: 450px;
     margin: 25px;
     text-align: center;
@@ -48,7 +47,7 @@ body{
     transition: 1s;
 }
 .container .card > img{
-    width: 270px;
+    width: 30px;
     height: 220px;
     border-radius: 5px 5px 5px 5px;
 }

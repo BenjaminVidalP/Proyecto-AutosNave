@@ -1,7 +1,7 @@
 from unicodedata import name
 from django.contrib import admin
 from django.urls import path
-from .views import  GestionAutos, registrarAutos, eliminarAuto, editarAuto,edicionAuto, home, CHEVROLET, FORD, HYUNDAI, JEEP, mapa, Marcas, Vehiculo,  admin,  Autos, Camionetas,InicioSesion, RegistroSesion, PerfilUsuario, AtencionCliente, EditarPerfil, Catalogo
+from .views import  GestionAutos, registrarAutos, eliminarAuto, editarAuto,edicionAuto, home, CHEVROLET, FORD, HYUNDAI, JEEP, mapa, Marcas, Vehiculo,  admin,  Autos, Camionetas,InicioSesion, RegistroSesion, PerfilUsuario, AtencionCliente, EditarPerfil, Catalogo,productos
 
 
 urlpatterns = [
@@ -27,5 +27,6 @@ urlpatterns = [
     path('AtencionCliente/', AtencionCliente, name="AtencionCliente"),
     path('EditarPerfil/', EditarPerfil, name="EditarPerfil"),
     path('Catalogo/', Catalogo, name= "Catalogo"),
+    path('productos/<idAuto>', productos,name="productos" ),
 
 ]

@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from .models import Auto
 from django.contrib import messages
+from . import views
 
 # Create your views here.
+
 
 
 def GestionAutos(request):
@@ -22,6 +24,10 @@ def registrarAutos(request):
 def editarAuto(request, idAuto):
     auto = Auto.objects.get(idAuto=idAuto)
     return render(request, "core/editarAuto.html", {"auto":auto})
+
+def productos(request, idAuto):
+    auto = Auto.objects.get(idAuto=idAuto)
+    return render(request, "core/productos.html", {"auto":auto})
 
 def edicionAuto(request):
     idAuto=request.POST['idAuto']
@@ -66,7 +72,8 @@ def PerfilUsuario(request):
     return render(request, 'core/PerfilUsuario.html')
 
 def Catalogo(request):
-     return render(request, 'core/Catalogo.html' )
+    autos=Auto.objects.all()
+    return render(request, 'core/Catalogo.html',{"veiculo":autos})
 
 #-----------------------MARCAS-------------------------
 
