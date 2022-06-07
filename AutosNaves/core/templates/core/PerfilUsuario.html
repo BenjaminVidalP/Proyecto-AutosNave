@@ -20,13 +20,13 @@
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
                 <h3 class="titulo">{{ user.username }}</h3>
-                <p class="texto"> be.vidalp@duocuc.cl</p>
+                <p class="texto">{{ user.email }} </p>
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
                     <li><i class="icono fas fa-phone-alt"></i> 943249790</li>
                     <li><i class="icono fas fa-briefcase"></i> Autos Naves</li>
-                    <li><i class="icono fas fa-building"></i> Usuario</li>
+                    <li><i class="icono fas fa-building"></i> {{ user.username }} </li>
                 </ul>
                 <ul class="lista-datos">
                     <li><i class="icono fas fa-user-check"></i> Registrado</li>
