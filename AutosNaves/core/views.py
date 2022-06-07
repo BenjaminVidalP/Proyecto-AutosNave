@@ -38,11 +38,31 @@ def GestionAutos(request):
 def registrarAutos(request):
     idAuto=request.POST['idAuto']
     nombre=request.POST['nombre']
+    img=request.FILES['banner']
+    img1=request.FILES['img1']
+    texto1=request.POST['text1']
+    img2=request.FILES['img2']
+    texto2=request.POST['text2']
+    img3=request.FILES['img3']
+    texto3=request.POST['text3']
+    img4=request.FILES['img4']
+    texto4=request.POST['text4']
     precio=request.POST['precio']
-    f=request.FILES['file']
-    auto=Auto.objects.create(idAuto=idAuto, nombre=nombre, precio=precio,foto=f)
+    foto=request.FILES['foto']
+    galeria1=request.FILES['galeria1']
+    galeria2=request.FILES['galeria2']
+    galeria3=request.FILES['galeria3']
+    galeria4=request.FILES['galeria4']
+    galeria5=request.FILES['galeria5']
+    galeria6=request.FILES['galeria6']
+    datoA=request.POST['datoA']
+    datoB=request.POST['datoB']
+    videoUrl=request.POST['video']
+
+    auto=Auto.objects.create(idAuto=idAuto, nombre=nombre, img=img,img1=img1,texto1=texto1,img2=img2,texto2=texto2,img3=img3,texto3=texto3,img4=img4,texto4=texto4, precio=precio,foto=foto,galeria1=galeria1,galeria2=galeria2,galeria3=galeria3,galeria4=galeria4,galeria5=galeria5,galeria6=galeria6,datoA=datoA,datoB=datoB,videoUrl=videoUrl)
     messages.success(request, '¡Auto Registrado!')
     return redirect('GestionAutos')
+
 
 @permission_required('app.add_producto')
 def editarAuto(request, idAuto):
