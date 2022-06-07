@@ -3,6 +3,7 @@ from .models import Auto
 from django.contrib import messages
 from .forms import UserRegisterForm
 from . import views
+from django.contrib.auth.decorators import login_required, permission_required
 
 # Create your views here.
 def login(request):
@@ -27,12 +28,13 @@ def logout(request):
 
     return render(request, 'core/logout.html')
 
-
+@permission_required('app.add_producto')
 def GestionAutos(request):
     autosListado = Auto.objects.all()
     messages.success(request, '¡Autos Actualizados!')
     return render(request, "core/GestionAutos.html", {"autos":autosListado})
 
+@permission_required('app.add_producto')
 def registrarAutos(request):
     idAuto=request.POST['idAuto']
     nombre=request.POST['nombre']
@@ -42,14 +44,17 @@ def registrarAutos(request):
     messages.success(request, '¡Auto Registrado!')
     return redirect('GestionAutos')
 
+@permission_required('app.add_producto')
 def editarAuto(request, idAuto):
     auto = Auto.objects.get(idAuto=idAuto)
     return render(request, "core/editarAuto.html", {"auto":auto})
 
+@permission_required('app.add_producto')
 def productos(request, idAuto):
     auto = Auto.objects.get(idAuto=idAuto)
     return render(request, "core/productos.html", {"auto":auto})
 
+@permission_required('app.add_producto')
 def edicionAuto(request):
     idAuto=request.POST['idAuto']
     nombre=request.POST['nombre']
@@ -67,6 +72,7 @@ def edicionAuto(request):
     messages.success(request, '¡Auto Actualizado!')
     return redirect('GestionAutos')
 
+@permission_required('app.add_producto')
 def eliminarAuto(request, idAuto):
     auto = Auto.objects.get(idAuto=idAuto)
     auto.delete()
