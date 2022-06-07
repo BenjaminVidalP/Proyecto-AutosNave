@@ -27,7 +27,7 @@ class Auto(models.Model):
     galeria6=models.ImageField(upload_to='Galeria6', blank=True, null=True)
     datoA =models.TextField(verbose_name='Descripcion auto 1', null=True)
     datoB =models.TextField(verbose_name='Descripcion auto 2', null=True)
-    videoUrl =models.URLField(max_length=280, verbose_name='Url video', null=True)
+    videoUrl =models.CharField(max_length=280, verbose_name='Url video', null=True)
 
     def __str__(self):
         return self.nombre
