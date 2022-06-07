@@ -1,6 +1,10 @@
 {% extends 'core/PlantillaLogin.html' %}
 {% load static %}
 
+{% block a %}
+<link rel="stylesheet" href="{% static 'core/css/usuario.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'core/css/plantillaF.css' %}">
+{% endblock %}
 {% block content %}
     <section class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
@@ -18,7 +22,7 @@
         </div>
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
-                <h3 class="titulo">Benjamin Vidal</h3>
+                <h3 class="titulo">{{ user.username }}</h3>
                 <p class="texto"> be.vidalp@duocuc.cl</p>
             </div>
             <div class="perfil-usuario-footer">
