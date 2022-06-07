@@ -27,38 +27,38 @@
 
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="http://127.0.0.1:8000"><img src="{% static 'core/img/LOGO/LogoChico.png' %}" alt="Avatar Logo" class="rounded-pill"></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'core/img/LOGO/LogoChico.png' %}" alt="Avatar Logo" class="rounded-pill"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/AutosNuevos/">Autos Nuevos</a>
+              <a class="nav-link fondoletrasmenu" href="{% url 'Catalogo' %}">Catalogo</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link fondoletrasmenu" href="{% url 'Marcas' %}">Marcas Disponibles</a>
+          </li>
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <li><a class="nav-link fondoletrasmenu" href="{% url 'logout' %}">Logout </a></li>
             </li>
             <li class="nav-item">
-                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/AutosSemiNuevos/">Autos Semi-Nuevos</a>
+              <li><a class="nav-link fondoletrasmenu" href="{% url 'PerfilUsuario' %}">{{ user.username }} </a></li>
             </li>
-            <li class="nav-item">
-                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/Marcas/">Marcas Disponibles</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/AtencionCliente/">Atencion al Cliente</a>
-            </li>    
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tipos</a>
-                <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="http://127.0.0.1:8000/Autos/">Autos</a></li>
-                <li><a class="dropdown-item" href="http://127.0.0.1:8000/Camionetas/">Camionetas </a></li>  
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cuenta</a>
-                <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="http://127.0.0.1:8000/RegistroSesion/">Registro</a></li>
-                <li><a class="dropdown-item" href="http://127.0.0.1:8000/InicioSesion/">Inicio Sesión </a></li>  
-                </ul>
-            </li>
+            {% if perms.app.add_producto %}
+              <li class="nav-item">
+                <li><a class="nav-link fondoletrasmenu" href="{% url 'GestionAutos' %}">Gestion Autos </a></li>
+              </li>
+            {% endif %}
+          {% else %}
+          <li class="nav-item">
+            <li><a class="nav-link fondoletrasmenu" href="{% url 'login' %}">Inicio Sesión </a></li>
+          </li>
+          <li class="nav-item">
+            <li><a class="nav-link fondoletrasmenu" href="{% url 'registro' %}">Registro</a></li>
+          </li>
+          {% endif %}
             </ul>
         </div>
         </div>
