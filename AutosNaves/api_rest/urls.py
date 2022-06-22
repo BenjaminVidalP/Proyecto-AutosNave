@@ -1,9 +1,9 @@
 from django.urls import path
-from api_rest.views import agregar_AUTO, listado_AUTO,modificarEliminarAUTO
+from api_rest.views import modificarEliminarAUTO1, modificarEliminarAUTO2, modificarEliminarAUTO3
 from api_rest.viewsLogin import loginApi
 urlpatterns = [
-    path('listado_AUTO/',listado_AUTO,name="listado_AUTO"),
-    path('agregar_AUTO/',agregar_AUTO,name="agregar_AUTO"),
-    path('modificarEliminarAUTO/<id>',modificarEliminarAUTO,name="modificarEliminarAUTO"),
+    path('modificarEliminarAUTO/<id>',modificarEliminarAUTO1,name="modificarEliminarAUTO"),
+    path('modificarEliminarAUTO2/<id>',modificarEliminarAUTO2,name="modificarEliminarAUTO2"),
+    path('modificarEliminarAUTO3/<id>',modificarEliminarAUTO3,name="modificarEliminarAUTO3"),
     path('loginApi/',loginApi,name="loginApi"),
 ]
