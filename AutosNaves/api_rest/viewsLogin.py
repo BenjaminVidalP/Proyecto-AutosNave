@@ -17,16 +17,13 @@ def loginApi(request):
     clave = data['password']
 
     try:
-        user1 = User.objects.get(username = usuario)
+        user1 = User.objects.get(username=usuario)
     except User.DoesNotExist:
         return Response("Usuario Incorrecto")
 
-    pass_validada = check_password(clave,user1.password)
+    pass_validada = check_password(clave, user1.password)
     if not pass_validada:
         return Response("Contraseña Incorrecta")
 
-    token,created = Token.objects.get_or_create(user= user1)
+    token, created = Token.objects.get_or_create(user=user1)
     return Response(token.key)
-    
-
-    

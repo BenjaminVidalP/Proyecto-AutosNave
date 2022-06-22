@@ -161,4 +161,3 @@ def modificarEliminarAUTO3(request, id):
     elif request.method == "DELETE":
         m.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
-
