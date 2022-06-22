@@ -118,11 +118,11 @@ def modificarEliminarAUTO2(request, id):
 def listado_Auto3(request):
     if request.method == 'GET':
         Auto = Auto.objects.all()
-        serializer = AUTOSerializers2(Auto, many=True)
+        serializer = AUTOSerializers3(Auto, many=True)
         return Response(serializer.data)
     elif request.method == 'POST':
         data = JSONParser().parse(request)
-        serializer = AUTOSerializers2(data=data)
+        serializer = AUTOSerializers3(data=data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
