@@ -11,7 +11,7 @@ class AUTOSerializers(serializers.ModelSerializer):
 class AUTOSerializers2(serializers.ModelSerializer):
     class Meta:
         model = Auto
-        fields = ['idAuto', 'nombre', 'texto1', 'img', 'texto2']
+        fields = ['idAuto', 'nombre', 'texto1','texto2']
 
 
 class AUTOSerializers3(serializers.ModelSerializer):
