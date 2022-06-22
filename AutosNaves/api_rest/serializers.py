@@ -5,16 +5,6 @@ from core.models import Auto
 class AUTOSerializers(serializers.ModelSerializer):
     class Meta:
         model = Auto
-        fields = ['idAuto', 'nombre', 'texto2']
+        fields = ['idAuto', 'nombre','precio', 'texto1', 'texto2', 'texto3', 'texto4', 'datoA', 'datoB']
 
 
-class AUTOSerializers2(serializers.ModelSerializer):
-    class Meta:
-        model = Auto
-        fields = ['idAuto', 'nombre', 'texto1','texto2']
-
-
-class AUTOSerializers3(serializers.ModelSerializer):
-    class Meta:
-        model = Auto
-        fields = ['idAuto', 'nombre', 'datoA', 'datoB']
