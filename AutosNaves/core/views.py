@@ -66,7 +66,7 @@ def registrarAutos(request):
     videoUrl = request.POST['video']
 
     auto = Auto.objects.create(idAuto=idAuto, nombre=nombre, img=img, img1=img1, texto1=texto1, img2=img2, texto2=texto2, img3=img3, texto3=texto3, img4=img4, texto4=texto4, precio=precio,
-                               foto=foto, galeria1=galeria1, galeria2=galeria2, galeria3=galeria3, galeria4=galeria4, galeria5=galeria5, galeria6=galeria6, datoA=datoA, datoB=datoB, videoUrl=videoUrl)
+            foto=foto, galeria1=galeria1, galeria2=galeria2, galeria3=galeria3, galeria4=galeria4, galeria5=galeria5, galeria6=galeria6, datoA=datoA, datoB=datoB, videoUrl=videoUrl)
     messages.success(request, '¡Auto Registrado!')
     return redirect('GestionAutos')
 
