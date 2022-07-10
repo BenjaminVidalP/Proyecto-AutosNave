@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>Panel Admin</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <!----css3---->
+    <link rel="stylesheet" href="{% static 'core/css/custom.css' %}">
+    <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+    <link rel="shortcut icon" href="{% static 'core/logo/Logocompania.png' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!--google material icon-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+
+    <div class="wrapper">
+
+
+        <div class="body-overlay"></div>
+
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="material-icons">admin_panel_settings</i><span> Autos Naves</span></h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="">
+                    <a href="http://127.0.0.1:8000/Administrador/" class="dashboard"><i
+                            class="material-icons">dashboard</i><span>Panel</span></a>
+                </li>
+
+                <div class="small-screen navbar-display">
+                    <li class="d-lg-none d-md-block d-xl-none d-sm-block">
+                        <a href="#"><i class="material-icons">person</i><span>user</span></a>
+                    </li>
+
+                </div>
+
+
+                <li class="">
+                    <a href="#"><i class="material-icons">receipt</i><span>Reportes</span></a>
+                </li>
+
+                <li class="">
+                    <a href=""><i class="material-icons">edit</i><span>Reportes</span></a>
+                </li>
+
+                <li class="">
+                    <a href="http://127.0.0.1:8000/GestionAutos"><i
+                            class="material-icons">directions_car</i><span>Vehiculos</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <li><a class="nav-link fondoletrasmenu" href="{% url 'logout' %}"><i
+                        class="material-icons">logout</i><span> Cerrar Sesión </a></span>
+                </li>
+
+
+            </ul>
+
+
+        </nav>
+
+
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <div class="top-navbar">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+
+                        <button type="button" id="sidebarCollapse" class="d-xl-block d-lg-block d-md-mone d-none">
+                            <span class="material-icons">arrow_back_ios</span>
+                        </button>
+
+                        {% block lugar %}
+                        {% endblock lugar %}
+
+
+
+                        <button class="d-inline-block d-lg-none ml-auto more-button" type="button"
+                            data-toggle="collapse" data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="material-icons">more_vert</span>
+                        </button>
+
+                        <div class="collapse navbar-collapse d-lg-block d-xl-block d-sm-none d-md-none d-none"
+                            id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="material-icons">person</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+
+            <div class="main-content">
+                {% block relleno %}
+
+                {% endblock relleno %}
+
+
+
+                <div>
+                    <footer class="footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="copyright d-flex justify-content-end"> &copy 2022 - <b>Autos Naves</b> -
+                                        Todos
+                                        los derechos reservados</p>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>

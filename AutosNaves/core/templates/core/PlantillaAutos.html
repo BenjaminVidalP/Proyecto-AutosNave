@@ -36,12 +36,12 @@
             <li class="nav-item">
               <a class="nav-link fondoletrasmenu" href="{% url 'Catalogo' %}">Catalogo</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link fondoletrasmenu" href="{% url 'Marcas' %}">Marcas Disponibles</a>
-          </li>
           {% if user.is_authenticated %}
             <li class="nav-item">
               <li><a class="nav-link fondoletrasmenu" href="{% url 'logout' %}">Logout </a></li>
+            </li>
+            <li class="nav-item">
+              <li><a class="nav-link fondoletrasmenu" href="{% url 'listar' %}">Listar </a></li>
             </li>
             <li class="nav-item">
               <li><a class="nav-link fondoletrasmenu" href="{% url 'PerfilUsuario' %}">{{ user.username }} </a></li>

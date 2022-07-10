@@ -1,0 +1,40 @@
+{% extends 'core/plantillaListar.html' %}
+{% block lugar %}
+<a class="navbar-brand" href="#"> Vehiculo</a>
+{% endblock lugar %}
+{% block relleno %}
+<div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+    <h1>Listado de Vehiculos</h1>
+    <div class="table-responsive py-2">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Foto</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in autos %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{c.idAuto}}</td>
+                    <td>{{c.nombre}}</td>
+                    <td>{{c.precio}}</td>
+                    <td>
+                        {% if c.foto %}
+                        <img src="{{ c.foto.url }}" alt="nnnn" style="width: 150px;height: 150px;">
+                        {% else %}
+                        <p>No tiene foto</p>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock relleno %}

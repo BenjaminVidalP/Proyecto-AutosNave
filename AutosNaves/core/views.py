@@ -112,6 +112,9 @@ def home(request):
 
     return render(request, 'core/pagina-home.html')
 
+def listar(request):
+    autosListado = Auto.objects.all()
+    return render(request, "core/listar.html", {"autos": autosListado})
 # ---------------------INICIO/REGISTRO/PerfilUsuario-----------------
 
 
@@ -152,6 +155,7 @@ def JEEP(request):
     return render(request, 'core/JEEP.html')
 
 # -----------------------PLANTILLAS------------------------
+
 
 
 # -------------------------mapa-api------------------------

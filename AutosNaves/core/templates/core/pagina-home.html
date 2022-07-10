@@ -34,15 +34,12 @@
         <li class="nav-item">
             <a class="nav-link fondoletrasmenu" href="{% url 'Catalogo' %}">Catalogo</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link fondoletrasmenu" href="{% url 'Catalogo' %}">Marcas Disponibles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fondoletrasmenu" href="{% url 'registro' %}">Registro</a>
-        </li>
         {% if user.is_authenticated %}
           <li class="nav-item">
             <li><a class="nav-link fondoletrasmenu" href="{% url 'logout' %}">Logout </a></li>
+          </li>
+          <li class="nav-item">
+            <li><a class="nav-link fondoletrasmenu" href="{% url 'listar' %}">Listar </a></li>
           </li>
           <li class="nav-item">
             <li><a class="nav-link fondoletrasmenu" >{{ user.username }} </a></li>
@@ -53,6 +50,9 @@
           </li>
           {% endif %}
         {% else %}
+        <li class="nav-item">
+          <a class="nav-link fondoletrasmenu" href="{% url 'registro' %}">Registro</a>
+        </li>
         <li class="nav-item">
           <li><a class="nav-link fondoletrasmenu" href="{% url 'login' %}">Inicio Sesión </a></li>
         </li>
