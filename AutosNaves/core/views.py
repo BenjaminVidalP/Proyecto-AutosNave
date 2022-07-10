@@ -125,7 +125,7 @@ def PerfilUsuario(request):
 
 def Catalogo(request):
     autos = Auto.objects.all()
-    return render(request, 'core/Catalogo.html', {"veiculo": autos})
+    return render(request, 'core/Catalogo.html', {"vehiculo": autos})
 
 # -----------------------MARCAS-------------------------
 
