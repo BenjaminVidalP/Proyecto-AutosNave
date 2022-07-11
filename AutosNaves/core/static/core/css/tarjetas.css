@@ -47,7 +47,7 @@ body{
     transition: 1s;
 }
 .container .card > img{
-    width: 270px;
+    width: 245px;
     height: 220px;
     border-radius: 5px 5px 5px 5px;
 }
@@ -216,4 +216,8 @@ body{
         padding: 35px 0px;
     }
     
+}
+
+.margene{
+    margin: 0px 0px 10px 0px;
 }

@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block au %}
-{% for c in veiculo %}
+{% for c in vehiculo %}
     <div class="card">
       <img src="{{ c.foto.url }}" alt="Hyundaitucson">
       <h2>{{c.nombre}}</h2>
       <p>${{c.precio}}</p>
-      <a href="http://127.0.0.1:8000/productos/{{c.idAuto}}" class="btn btn-danger">Mas informacion</a>
+      <a href="http://127.0.0.1:8000/productos/{{c.idAuto}}" class="btn btn-danger margene" >Mas informacion</a>
     </div>
 {% endfor %}
 {% endblock %}
