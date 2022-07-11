@@ -20,7 +20,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="http://127.0.0.1:8000/paginahome/"><img src="{% static 'core/img/LOGO/LogoChico.png' %}"
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'core/img/LOGO/LogoChico.png' %}"
                     alt="Avatar Logo" class="rounded-pill"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -32,29 +32,7 @@
                     </li>
 
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/Marcas/">Marcas Disponibles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fondoletrasmenu" href="http://127.0.0.1:8000/AtencionCliente/">Atencion al
-                            Cliente</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Tipos</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/Autos/">Autos</a></li>
-                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/Camionetas/">Camionetas </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Cuenta</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/PerfilUsuarioAD/">Ver perfil</a>
-                            </li>
-                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/Administrador/">Ver cuentas</a>
-                            </li>
-                        </ul>
-                    </li>
+                   
                 </ul>
             </div>
         </div>
@@ -71,8 +49,8 @@
             <div class="container">
                 <div class="perfil-usuario-portada">
                     <div class="perfil-usuario-avatar">
-                        <img src="{% static 'core/img/LOGO/Logocompania.png' %}" alt="img-avatar" width="250"
-                            height="250" class="img-fluid">
+                        <img src="{% static 'core/img/LOGO/usuario1.png' %}" alt="img-avatar" width="250"
+                            height="250">
                     </div>
                     <div class="form-group">
                         <input type="file" id="file" name="file" class="form-control" required>
